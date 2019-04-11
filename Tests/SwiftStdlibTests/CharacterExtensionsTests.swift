@@ -35,6 +35,13 @@ final class CharacterExtensionsTests: XCTestCase {
         XCTAssertFalse(Character("3").isLetter)
         XCTAssertFalse(Character("-").isLetter)
     }
+    
+    func testIsLetterOrNumber() {
+        XCTAssertTrue(Character("a").isLetterOrNumber)
+        XCTAssertTrue(Character("B").isLetterOrNumber)
+        XCTAssertTrue(Character("3").isLetterOrNumber)
+        XCTAssertFalse(Character("!").isLetterOrNumber)
+    }
 
     func testIsLowercased() {
         XCTAssert(Character("s").isLowercased)

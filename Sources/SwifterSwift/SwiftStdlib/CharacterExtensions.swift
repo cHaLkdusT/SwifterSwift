@@ -53,6 +53,16 @@ public extension Character {
     var isLetter: Bool {
         return String(self).rangeOfCharacter(from: .letters, options: .numeric, range: nil) != nil
     }
+    
+    /// SwifterSwift: Check if character is a letter or a number.
+    ///
+    ///        Character("4").isLetterOrNumber -> true
+    ///        Character("a").isLetterOrNumber -> true
+    ///        Character("!").isLetterOrNumber -> false
+    ///
+    var isLetterOrNumber: Bool {
+        return isNumber || isLetter
+    }
 
     /// SwifterSwift: Check if character is lowercased.
     ///
